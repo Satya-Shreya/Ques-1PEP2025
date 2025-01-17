@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+struct Student{
+	string name;
+	int roll;
+	float marks[3];
+};
+int main(){
+	Student* st=new Student;
+	getline(cin,st->name);
+	cin>>st->roll;
+	for(int i=0;i<3;i++){
+		cin>>st->marks[i];
+	}
+	
+	int sum=0;
+	for(int i=0;i<3;i++){
+		sum+=st->marks[i];
+	}
+	
+	cout<<sum/3;
+	
+}
